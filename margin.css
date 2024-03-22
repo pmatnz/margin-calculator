@@ -1,0 +1,147 @@
+body {
+	margin: 0;
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	min-width: 400px;
+	background-color: orange;
+	display: grid;
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	height: 50vh;
+	place-items: center;
+}
+
+#cost-input {
+	width: 300px; /* Adjust the width as needed */
+}
+
+#inputValueList {
+	max-width: 300px; /* Limit the maximum width of the list */
+	overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+#cost-input,
+#input-percentage {
+	display: inline-block; /* Make the buttons wrap around the text */
+	cursor: pointer;
+	position: relative;
+	padding: 5px 10px; /* Adjust padding as needed */
+	font-size: 15px; /* Adjust font size as needed */
+	background: white;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	transition: all 1s;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	width: auto; /* Set width to auto to adjust based on content */
+	max-width: 100px; /* Set maximum width as needed */
+	&:after,
+	&:before {
+		content: " ";
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		border: 0px solid #fff;
+		transition: all 1s;
+	}
+	&:after {
+		top: -1px;
+		left: -1px;
+		border-top: 5px solid black;
+		border-left: 5px solid black;
+	}
+	&:before {
+		bottom: -1px;
+		right: -1px;
+		border-bottom: 5px solid black;
+		border-right: 5px solid black;
+	}
+	&:hover {
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+	}
+}
+
+#clear-button {
+	cursor: pointer;
+	position: relative;
+	padding: 5px 10px; /* Adjust padding to make the button smaller */
+	font-size: 12px; /* Decrease font size to make the text smaller */
+	background: white;
+	border-top-right-radius: 5px; /* Adjust border radius if needed */
+	border-bottom-left-radius: 5px; /* Adjust border radius if needed */
+	transition: all 1s;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 50px;
+	&:after,
+	&:before {
+		content: " ";
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		border: 0px solid #fff;
+		transition: all 1s;
+	}
+	&:after {
+		top: -1px;
+		left: -1px;
+		border-top: 5px solid black;
+		border-left: 5px solid black;
+	}
+	&:before {
+		bottom: -1px;
+		right: -1px;
+		border-bottom: 5px solid black;
+		border-right: 5px solid black;
+	}
+	&:hover {
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+		&:before,
+		&:after {
+			width: 100%;
+			height: 100%;
+			border-color: white;
+		}
+	}
+}
+
+#inputValueList {
+	color: inherit;
+	text-decoration: none;
+	list-style: none;
+	margin: 15px 50px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 50px;
+}
+
+#inputValueList li {
+	opacity: 0;
+	animation: fade-in 1s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0; /* Start with opacity set to 0 */
+	}
+	to {
+		opacity: 1; /* End with opacity set to 1 */
+	}
+}
+
+#heading {
+	font-weight: bold;
+	font-size: 27px;
+	margin-left: 25px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 50px;
+}
+
+#inputValue-container {
+	white-space: nowrap; /* Prevent text from wrapping */
+	overflow-x: auto; /* Enable horizontal scrolling if needed */
+}

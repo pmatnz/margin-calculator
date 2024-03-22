@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Title</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="margin.css" />
+		<!-- JavaScript -->
+		<script src="margin.js" defer></script>
+	</head>
+	<body>
+		<div id="container">
+			<h1 id="heading">Margin Calculator</h1>
+			<div id="input-cost">
+				<input
+					type="text"
+					id="cost-input"
+					placeholder="Cost Price"
+					maxlength="6"
+					minlength="1"
+				/>
+				<input
+					id="input-percentage"
+					type="text"
+					placeholder="Margin %"
+					maxlength="2"
+					minlength="1"
+				/>
+				<button id="clear-button">Clear</button>
+			</div>
+			<div id="inputValue-container">
+				<li id="inputValueList"></li>
+			</div>
+			<div id="error-message"></div>
+		</div>
+	</body>
+</html>
