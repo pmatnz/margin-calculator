@@ -17,12 +17,14 @@ const marginValuesTest = {
 
 costInput.addEventListener("input", function () {
 	const convertToInt = parseFloat(costInput.value); // Convert input value to float
+	const hasComma = /\,/.test(costInput.value); //regex to check for a comma an test aganist the input
 	if (costInput.value.trim() === "") {
+		// .trim to remove whitespaces
 		// Check if input is empty
 		// Clear the input list and error message
 		inputList.innerHTML = "";
 		errorMessage.innerHTML = "";
-	} else if (!isNaN(convertToInt)) {
+	} else if (!hasComma && !isNaN(convertToInt)) {
 		// Check if input is a valid number
 		inputList.innerHTML = ""; // Clear previous values
 		for (const percentage in marginValuesTest) {
@@ -40,7 +42,7 @@ costInput.addEventListener("input", function () {
 		errorMessage.innerHTML = "";
 	} else {
 		// Display an error message if the input is not a valid number
-		errorMessage.innerHTML = "<p>Please enter a number only</p>";
+		errorMessage.innerHTML = "<p>Please enter numbers only</p>";
 	}
 });
 
@@ -107,4 +109,8 @@ clearButton.addEventListener("click", function () {
 	marginPercentageInput.value = "";
 	// Clear any error message
 	errorMessage.innerHTML = "";
+});
+
+costInput.addEventListener("mouseover", () => {
+	console.log("value");
 });
